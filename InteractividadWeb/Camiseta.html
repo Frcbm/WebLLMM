@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <meta author="Francesc Barbón Cursach, Francesc Sorà Quevedo">
+    <title>Camiseta</title>
+    <link rel="stylesheet" href="css.css">
+</head>
+<body onload="colorBody()">
+    <!--La principal funcionalidad de esta página es poder usarla en un futuro
+    para introducir un formulario web-->
+    <header>
+        <!--Cabecera de la página que incluye 3 imágenes-->
+        <a href="Index.html"><img src="Contents/Imagenes/logo.jpg" alt="logo equipo" id="logo"></img></a>
+        <a href ="Index.html" id="enlaceCabecera"><img src="Contents/Imagenes/Titulo.png" alt="cabecera equipo" id="cabecera"></a>
+        <a href ="https://www.intel.la/content/www/xl/es/homepage.html"><img src="Contents/Imagenes/intel.png" alt="patrocinio intel" id="intel"></a>
+    </header>
+    <!--Este formulario lo utilizamos para hacer una encuesta-->
+    <p class="encuesta">Puntua nuestra página</p>
+    <form class="encuesta">
+        <input type="checkbox" id="1estrella" onclick="desmarca()" value="1">1*
+        <input type="checkbox" id="2estrella" onclick="desmarca()" value="2">2*
+        <input type="checkbox" id="3estrella" onclick="desmarca()" value="3">3*
+        <input type="checkbox" id="4estrella" onclick="desmarca()" value="4">4*
+        <input type="checkbox" id="5estrella" onclick="desmarca()" value="5">5*
+        <button type="button" onclick="puntuaPagina()">Puntua</button>
+    </form>
+    <p class="encuesta" id="media"></p>
+    <a href="suscripcion.html"><button type="button">Hazte Socio</button></a>
+    <button class="tema" onclick="cambiarTema()">Cambiar tema</button>
+    <main>
+        <!--Hemos duplicado los aside que nos muestran la información de la camiseta y 
+            el menu, porque 2 de ellos se encontraran a una posición o en otra, y solo se mostraran en 
+            según el tamaño de la pantalla-->
+        <article class="movil">
+            <aside >
+            <!--Navegador de la página, con una lista de enlaces que nos permite
+            navegar por nuestra página-->
+            <nav>
+                <ul>
+                    <lh>Indice</lh>
+                    <li><a href="Index.html">Inicio</li></a>
+                    <li><a href="Sobre_nosotros.html">Sobre Nosotros</li></a>
+                    <li><a href="Jugadores.html">Jugadores</li></a>
+                </ul>
+            </nav>
+            </aside>
+            <aside id="camisetamovil">
+                <!--A través de los siguientes enlaces iríamos a una páginas que de momento
+                esta sin usar, pero que nos servirá a la hora de hacer formularios web-->
+                <a href= "Camiseta.html"><p><b>¡¡Adquiere nuestra camiseta!!</b></p></a>
+                <a href = "Camiseta.html"><img src="Contents/Imagenes/camiseta.png" alt="foto camiseta"></a>
+            </aside>
+        </article>
+        <aside class="ordenador">
+            <!--Navegador de la página, con una lista de enlaces que nos permite
+            navegar por nuestra página-->
+            <nav>
+                <ul>
+                    <lh>Indice</lh>
+                    <li><a href="Index.html">Inicio</li></a>
+                    <li><a href="Sobre_nosotros.html">Sobre Nosotros</li></a>
+                    <li><a href="Jugadores.html">Jugadores</li></a>
+                </ul>
+            </nav>
+        </aside>
+        <!--En esta ocasión no lo hemos introducido en un article porque es solo
+        un texto provisional y hemos considerado que no era necesario-->
+        <form class="parrafo" onsubmit="return validar()" method="post" id="form">
+            <legend>¡¡Compra nuestra camiseta por solo 49,99!!</legend><br>
+            <label for="nom">Nombre:</label><br>
+            <input id="nom" type="text"><br>
+            <label for="llin">Apellidos:</label><br>
+            <input id="llin" type="text"><br>
+            <label for="dir">Dirección de envio:</label><br>
+            <input id="dir" type="text"><br>
+            <label for="email">e-Mail:</label><br>
+            <input id="email" type="text"><br>
+            <label for="tlf">Teléfono:</label><br>
+            <input id="tlf" type="tel"><br>
+            <br>
+            <br>
+            <select id="tarjeta" onclick="pagament()"><br>
+                <option>Elige el método de pago</option>
+                <option value="visa">Visa</option>
+                <option value="mc">Master Card</option>
+                <option value="payp">Pay-Pal</option>
+                <option value="biz">Bizum</option>
+            </select>
+        </form><br>
+        <aside id="camiseta" class="ordenador">
+            <!--A través de los siguientes enlaces iríamos a una páginas que de momento
+            esta sin usar, pero que nos servirá a la hora de hacer formularios web-->
+                <a href="Camiseta.html"><p><b>¡¡Adquiere nuestra camiseta!!</b></p></a>
+                <a href="Camiseta.html"><img src="Contents/Imagenes/camiseta.png" alt="foto camiseta" id="cam"></a>
+            </aside>
+    </main>
+    <footer>
+        <!--El footer con nuestra información-->
+        <p>Francesc Barbón Cursach/Francesc Sorà Quevedo</p>
+        <p>IFC 33-A</p>
+        <p>Crow Gaming Intel e-Sports Club</p>
+    </footer>
+    <script src="js.js"></script>
+</body>
+</html>

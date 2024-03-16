@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <meta author="Francesc Barbón Cursach, Francesc Sorà Quevedo">
+    <title>jugadores</title>
+    <link rel="stylesheet" href="css.css">
+</head>
+<body onload="colorBody()">
+    <header>
+        <!--Cabecera de la página que incluye 3 imágenes-->
+        <a href="Index.html"><img src="Contents/Imagenes/logo.jpg" alt="logo equipo" id="logo"></img></a>
+        <a href ="Index.html" id="enlaceCabecera"><img src="Contents/Imagenes/Titulo.png" alt="cabecera equipo" id="cabecera"></a>
+        <a href ="https://www.intel.la/content/www/xl/es/homepage.html"><img src="Contents/Imagenes/intel.png" alt="patrocinio intel" id="intel"></a>
+    </header>
+    <!--Este formulario lo utilizamos para hacer una encuesta-->
+    <p class="encuesta">Puntua nuestra página</p>
+    <form class="encuesta">
+        <input type="checkbox" id="1estrella" onclick="desmarca()" value="1">1*
+        <input type="checkbox" id="2estrella" onclick="desmarca()" value="2">2*
+        <input type="checkbox" id="3estrella" onclick="desmarca()" value="3">3*
+        <input type="checkbox" id="4estrella" onclick="desmarca()" value="4">4*
+        <input type="checkbox" id="5estrella" onclick="desmarca()" value="5">5*
+        <button type="button" onclick="puntuaPagina()">Puntua</button>
+    </form>
+    <p class="encuesta" id="media"></p>
+    <a href="suscripcion.html"><button type="button">Hazte Socio</button></a>
+    <button class="tema" onclick="cambiarTema()">Cambiar tema</button>
+    <main id="jug">
+        <!--Hemos duplicado los aside que nos muestran la información de la camiseta y 
+            el menu, porque 2 de ellos se encontraran a una posición o en otra, y solo se mostraran en 
+            según el tamaño de la pantalla-->
+        <article class="movil">
+            <aside >
+            <!--Navegador de la página, con una lista de enlaces que nos permite
+            navegar por nuestra página-->
+            <nav>
+                <ul>
+                    <lh>Indice</lh>
+                    <li><a href="Index.html">Inicio</li></a>
+                    <li><a href="Sobre_nosotros.html">Sobre Nosotros</li></a>
+                    <li><a href="Jugadores.html">Jugadores</li></a>
+                </ul>
+            </nav>
+            </aside>
+            <aside id="camisetamovil">
+                <!--A través de los siguientes enlaces iríamos a una páginas que de momento
+                esta sin usar, pero que nos servirá a la hora de hacer formularios web-->
+                <a href= "Camiseta.html"><p><b>¡¡Adquiere nuestra camiseta!!</b></p></a>
+                <a href = "Camiseta.html"><img src="Contents/Imagenes/camiseta.png" alt="foto camiseta"></a>
+            </aside>
+        </article>
+        <aside class="ordenador">
+            <!--Navegador de la página, con una lista de enlaces que nos permite
+            navegar por nuestra página-->
+            <nav>
+                <ul>
+                    <lh>Indice</lh>
+                    <li><a href="Index.html">Inicio</li></a>
+                    <li><a href="Sobre_nosotros.html">Sobre Nosotros</li></a>
+                    <li><a href="Jugadores.html">Jugadores</li></a>
+                </ul>
+            </nav>
+        </aside>
+        <!--Primer article-->
+        <button type="button" onclick="retroceder()">Anterior</button>
+        <article class="parrafo">
+            <img onmouseenter="mostrarText()" onmouseleave="ocultarText()" src="Contents/Imagenes/cuervo_1.jpg" alt="Llorenç Corbet" class="fotos">
+            <p>Llorenç Corbet</p>
+            <p>Caimari</p>
+            <p>22 años</p>
+            <article class="oculto" style="visibility: hidden">
+                <p>Llorenç Corbet, natural de Caimari empezó a jugar a los 13 años, desde entonces se ha enfrentado a algunos de los mejores jugadores del pais mostrando de sobra que merece estar entre ellos.</p>
+            </article>
+        </article>
+        <!--Segundo article-->
+        <article onmouseenter="mostrarText()" onmouseleave="ocultarText()" class="parrafo" style="display:none">
+            <img src="Contents/Imagenes/cuervo_2.jpg" alt="Miquela Alana Pou" class="fotos">
+            <p>Miquela Alana Pou</p>
+            <p>Ca's Concos de's Cavaller</p>
+            <p>24 años</p>
+            <article class="oculto" style="visibility: hidden">
+                <p>Miquel Alana Pou nació en Ca's Concos de's Cavaller, su padre tenía unos terrenos y no solia jugar al ordenador, hasta que un dia descubrió su pasión por los videojuegos tras visitar a una amiga en Manacor. Desde entonces, no ha parado.</p>
+            </article>
+        </article>
+        <!--Tercer article-->
+        <article onmouseenter="mostrarText()" onmouseleave="ocultarText()" class="parrafo" style="display:none">
+            <img src="Contents/Imagenes/cuervo_3.jpg" alt="Tomás Carronyer" class="fotos">
+            <p>Tomás Carronyer</p>
+            <p>Pina</p>
+            <p>19 años</p>
+            <article class="oculto" style="visibility: hidden">
+                <p>Tomás Carronyer, oriundo de Pina, es un prodigio del deporte desde una edad temprana. A los 12 años, ya estaba destacando en competiciones locales y llamando la atención de los cazatalentos.</p>
+                <p>A los 16 años, fue reclutado por un equipo profesional, y desde entonces ha demostrado su valía en el campo, enfrentándose a algunos de los mejores jugadores del mundo y ganándose el respeto de la comunidad deportiva.</p>
+            </article>
+        </article>
+        <button type="button" onclick="avanzar()">Siguiente</button>
+        <aside id="camiseta" class="ordenador">
+            <!--A través de los siguientes enlaces iríamos a una páginas que de momento
+            esta sin usar, pero que nos servirá a la hora de hacer formularios web-->
+                <a href="Camiseta.html"><p><b>¡¡Adquiere nuestra camiseta!!</b></p></a>
+                <a href="Camiseta.html"><img src="Contents/Imagenes/camiseta.png" alt="foto camiseta" id="cam"></a>
+            </aside>
+    </main>
+    <footer>
+        <!--El footer con nuestra información-->
+        <p>Francesc Barbón Cursach/Francesc Sorà Quevedo</p>
+        <p>IFC 33-A</p>
+        <p>Crow Gaming Intel e-Sports Club</p>
+    </footer>
+    <script src="js.js"></script>
+</body>
+</html>

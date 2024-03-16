@@ -1,0 +1,317 @@
+/*Hemos rehecho el css de la página para que se adapte mejor el responsive*/
+body{
+    display: flex;
+    flex-direction: column;
+    background-color: black; 
+    height: 100vh;
+    margin:0;
+}
+/*header hace referencia a la cabecera donde tenemos el logo del equipo,
+el nombre y el patrocinador*/
+header{
+    display: flex;
+    flex-direction: row;
+    align-items: center ;
+    justify-content: space-between;
+    margin: 0;
+    width: 99.6%;
+    height:auto;
+    margin-bottom: 2;
+}
+a{
+    width: 10%;
+    height: auto;
+}
+a img{
+    width: 100%;
+    height: auto;
+}
+.parrafo{
+    padding: 2%;
+}
+.fotos{
+    width:50%;
+    height: auto;
+}
+
+iframe{
+    width: 50%;
+    min-height: 300px;
+}
+/*Main es el cuerpo, donde se encuentran los aside y los elementos, que
+suelen pertenecer a la clase parrafo*/
+main{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 4%;
+    margin-bottom: 4%;
+}
+
+#enlaceCabecera{
+    width: 70%;
+    height: auto;
+}
+#cabecera{
+    width: 100%;
+    height: auto;
+}
+#intel{
+    width: 100%;
+    height: auto;
+}
+header, nav, #camiseta, #camisetamovil{
+    border: 4px solid #800080;
+    background-color: #D4AF37;
+}
+footer{
+    width: 99.7%;
+    text-align: center;
+    border:4px solid #D4AF37;
+}
+.parrafo, footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    color: white;
+}
+article{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: auto;
+} 
+h1{
+    color:white; 
+}
+#camiseta{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 15%;
+    height: auto;
+    overflow: hidden;
+}
+#camiseta a{
+    width: 100%;
+    height: auto;
+}
+aside{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 15%; 
+    height: auto;
+    text-align: center;
+    
+}
+nav{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: auto;
+}
+/*La siguientes lineas definen la estructura del carnet que se genera
+con el formulario de suscripcion*/
+#carnet{
+    display: flex;
+    justify-content: flex-start;
+    width: 35%;
+    height: 75%;
+    display: none;
+    padding: 10px;
+}
+.lineasCarnet{
+    text-decoration: underline;
+}
+.carnet h3{
+    text-align: center;
+}
+
+#informacionCarnet{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+}
+#interiorCarnet{
+    width: 50%;
+    height: 50%;
+}
+.lineasCarnet{
+    display: flex;
+    width: 50%;
+    height: auto;
+    flex-direction: column;
+}
+#interiorCarnet img{
+    padding:20px;
+    width: 150px;
+    height: 200px;
+}
+.tema{
+    width: 10%;
+    align-self: flex-end;
+}
+/*Las siguientes lineas definen los estilos del cuadrado con información 
+de la página jugadores que aparece al pasar el ratón por encima*/
+.oculto{
+    background-color: hsla(180, 1%, 54%, 0.57);
+    position: absolute;
+    color:white;
+}
+/*El siguiente apartado */
+#fotosEvento{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.fotosEvento{
+    width: 20%;
+    height: 20%;
+}
+.encuesta{
+    color:white;
+}
+
+
+/*Hemos utilizado 3 media queries, que principalmente se encargaran de cambiar el
+la disposición de los 2 asides menu y camiseta*/
+@media screen and (max-device-width: 2000px){
+    .movil{
+        display: none;
+    }
+    .ordenador, #camiseta{
+        display: flex;
+        justify-content: space-between;
+    }
+    main{
+        flex-direction: row;
+    }
+    aside{
+        font-size: 14pt;
+    }
+    footer, .parrafo{
+        font-size: 15pt;
+    }
+    iframe{
+        width: 50%;
+        min-height: 300px;
+        height: auto;
+    }
+}
+@media screen and (max-device-width: 1200px){
+    
+    main{
+        flex-direction: column;
+        width: 100%;
+    }
+    .parrafo{
+        width: 95%;
+    }
+    .ordenador,#camiseta{
+        display: none;
+    }
+    .movil{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
+    }
+    .movil aside{
+        width:50%;
+    }
+    aside{
+        font-size: 12pt;
+    }       
+    footer, .parrafo{
+        font-size: 20pt;
+    }
+    #camisetamovil{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        width: 30%;
+        height: auto;
+        overflow: hidden;
+    }
+    #camisetamovil a{
+        width: 100%;
+        height: auto;
+    }
+    iframe{
+
+        width: 50%;
+        min-height: 300px;
+        height: auto;
+    }
+    .fotosEvento{
+        width: 50%;
+        height: 50%;
+    }
+}
+@media screen and (max-device-width: 750px){
+    
+    main{
+        flex-direction: column;
+        width: 100%;
+    }
+    .parrafo{
+        width: 95%;
+    }
+    .ordenador,#camiseta{
+        display: none;
+    }
+    .movil{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
+    }
+    .movil aside{
+        width:50%;
+    }
+    aside{
+        font-size: 20pt;
+    }       
+    footer, .parrafo{
+        font-size: 30pt;
+    }
+    #camisetamovil{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        width: 30%;
+        height: auto;
+        overflow: hidden;
+    }
+    #camisetamovil a{
+        width: 100%;
+        height: auto;
+    }
+    iframe{
+
+        width: 50%;
+        min-height: 300px;
+        height: auto;
+    }
+    .fotosEvento{
+        width: 50%;
+        height: 50%;
+    }
+    #carnet{
+        width: 60%;
+        height: 40%;
+    }
+}
+
+
+
+
